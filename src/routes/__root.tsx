@@ -114,6 +114,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <script src="/chat-widget.js" defer />
       </body>
     </html>
   );
