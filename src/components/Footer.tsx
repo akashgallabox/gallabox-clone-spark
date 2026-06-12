@@ -1,4 +1,6 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
 import { Logo } from "./Logo";
 
 const columns = [
@@ -55,10 +57,10 @@ export function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row">
           <p>© {new Date().getFullYear()} Gallabox clone. For demo purposes only.</p>
           <div className="flex gap-6">
-            <Link to="/" className="hover:text-primary">
+            <Link href="/" className="hover:text-primary">
               Automation
             </Link>
-            <Link to="/pricing" className="hover:text-primary">
+            <Link href="/pricing" className="hover:text-primary">
               Pricing
             </Link>
           </div>

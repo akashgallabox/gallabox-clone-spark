@@ -1,30 +1,22 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { Metadata } from "next";
 import { ArrowUpRight, CheckCircle2, Workflow, Send, BellRing, Plug, Star } from "lucide-react";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-import heroImg from "../assets/automation-hero.jpg";
-import workflowImg from "../assets/chatbot-workflow.jpg";
-import dripImg from "../assets/drip-campaign.jpg";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import Image from "next/image";
+import heroImg from "@/assets/automation-hero.jpg";
+import workflowImg from "@/assets/chatbot-workflow.jpg";
+import dripImg from "@/assets/drip-campaign.jpg";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "WhatsApp Automation Tool — Gallabox" },
-      {
-        name: "description",
-        content:
-          "Automate 50% of your customer conversations on WhatsApp with an AI-powered automation tool. Improve lead engagement, drive sales and reduce support tickets.",
-      },
-      { property: "og:title", content: "WhatsApp Automation Tool — Gallabox" },
-      {
-        property: "og:description",
-        content:
-          "Automate 50% of your customer conversations on WhatsApp with an AI-powered automation tool.",
-      },
-    ],
-  }),
-  component: AutomationPage,
-});
+export const metadata: Metadata = {
+  title: "WhatsApp Automation Tool — Gallabox",
+  description:
+    "Automate 50% of your customer conversations on WhatsApp with an AI-powered automation tool. Improve lead engagement, drive sales and reduce support tickets.",
+  openGraph: {
+    title: "WhatsApp Automation Tool — Gallabox",
+    description:
+      "Automate 50% of your customer conversations on WhatsApp with an AI-powered automation tool.",
+  },
+};
 
 const clients = ["Tata 1mg", "Thrillophilia", "Biotique", "Footprint", "Shiprocket", "Apollo"];
 
@@ -95,7 +87,7 @@ const stats = [
   { value: "20K+", label: "Global active users" },
 ];
 
-function AutomationPage() {
+export default function AutomationPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -120,12 +112,13 @@ function AutomationPage() {
         </div>
         <div className="relative">
           <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-accent/60 blur-2xl" />
-          <img
+          <Image
             src={heroImg}
             width={1024}
             height={1024}
             alt="AI-powered WhatsApp automation conversation on a smartphone"
-            className="w-full rounded-3xl shadow-pop"
+            className="w-full rounded-3xl shadow-pop h-auto"
+            priority
           />
         </div>
       </section>
@@ -170,13 +163,12 @@ function AutomationPage() {
                 ))}
               </ul>
             </div>
-            <img
+            <Image
               src={f.image}
               width={1280}
               height={896}
-              loading="lazy"
               alt={f.title}
-              className="w-full rounded-2xl border border-border shadow-card"
+              className="w-full rounded-2xl border border-border shadow-card h-auto"
             />
           </div>
         ))}

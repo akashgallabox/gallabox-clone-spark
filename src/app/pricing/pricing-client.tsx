@@ -1,27 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+"use client";
+
 import { useState } from "react";
 import { ArrowUpRight, Check, Code2 } from "lucide-react";
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
-
-export const Route = createFileRoute("/pricing")({
-  head: () => ({
-    meta: [
-      { title: "Pricing — Gallabox" },
-      {
-        name: "description",
-        content:
-          "Simple, transparent pricing for every team. Pick the Gallabox plan that matches your growth goal. Try free, no credit card required.",
-      },
-      { property: "og:title", content: "Pricing — Gallabox" },
-      {
-        property: "og:description",
-        content: "Pick the Gallabox plan that matches your growth goal. Try free.",
-      },
-    ],
-  }),
-  component: PricingPage,
-});
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 type Plan = {
   name: string;
@@ -139,7 +121,7 @@ const embedSnippet = `<!-- Gallabox chat widget -->
 </script>
 <script src="https://your-domain.com/chat-widget.js" async></script>`;
 
-function PricingPage() {
+export default function PricingClient() {
   const [yearly, setYearly] = useState(true);
 
   return (

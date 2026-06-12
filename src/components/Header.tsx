@@ -1,4 +1,7 @@
-import { Link } from "@tanstack/react-router";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
@@ -7,6 +10,7 @@ const navItems = ["Product", "Solutions", "Integration", "Knowledge hub", "Partn
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
@@ -27,9 +31,10 @@ export function Header() {
 
         <div className="hidden items-center gap-5 lg:flex">
           <Link
-            to="/pricing"
-            className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
-            activeProps={{ className: "text-primary" }}
+            href="/pricing"
+            className={`text-sm font-medium transition-colors hover:text-primary ${
+              pathname === "/pricing" ? "text-primary" : "text-foreground/80"
+            }`}
           >
             Pricing
           </Link>
@@ -57,7 +62,7 @@ export function Header() {
                 {item}
               </span>
             ))}
-            <Link to="/pricing" className="text-sm font-medium text-primary">
+            <Link href="/pricing" className="text-sm font-medium text-primary">
               Pricing
             </Link>
             <a
