@@ -157,8 +157,8 @@ function PricingPage() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
             Every plan is built around a number that matters: faster speed-to-lead, higher
-            qualification rates, or more pipeline generated. Pick the plan that matches your
-            growth goal.
+            qualification rates, or more pipeline generated. Pick the plan that matches your growth
+            goal.
           </p>
         </div>
       </section>
@@ -212,9 +212,7 @@ function PricingPage() {
                   </span>
                 )}
                 <h3 className={`text-2xl font-bold ${plan.color}`}>{plan.name}</h3>
-                <p className="mt-3 min-h-[72px] text-sm text-muted-foreground">
-                  {plan.tagline}
-                </p>
+                <p className="mt-3 min-h-[72px] text-sm text-muted-foreground">{plan.tagline}</p>
 
                 <div className="mt-4">
                   {price === null ? (
@@ -222,9 +220,7 @@ function PricingPage() {
                   ) : (
                     <p className="text-4xl font-bold text-foreground">
                       ${price}
-                      <span className="ml-1 text-sm font-normal text-muted-foreground">
-                        /mo
-                      </span>
+                      <span className="ml-1 text-sm font-normal text-muted-foreground">/mo</span>
                     </p>
                   )}
                   <p className="mt-1 text-xs text-muted-foreground">
@@ -319,17 +315,17 @@ function PricingPage() {
               Add the chat widget to any website
             </h2>
             <p className="mt-3 text-muted-foreground">
-              Drop this snippet before your closing <code>&lt;/body&gt;</code> tag to launch
-              the Gallabox chat widget anywhere. The same widget is live on this site — look
-              for the bubble in the bottom-right corner.
+              Drop this snippet before your closing <code>&lt;/body&gt;</code> tag to launch the
+              Gallabox chat widget anywhere. The same widget is live on this site — look for the
+              bubble in the bottom-right corner.
             </p>
             <ul className="mt-5 space-y-2 text-sm text-foreground/90">
               <li className="flex gap-2">
                 <Check className="h-4 w-4 text-whatsapp" /> No dependencies, ~3KB script
               </li>
               <li className="flex gap-2">
-                <Check className="h-4 w-4 text-whatsapp" /> Customizable colors, title and
-                quick replies
+                <Check className="h-4 w-4 text-whatsapp" /> Customizable colors, title and quick
+                replies
               </li>
               <li className="flex gap-2">
                 <Check className="h-4 w-4 text-whatsapp" /> Works on any HTML site

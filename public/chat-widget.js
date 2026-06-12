@@ -14,8 +14,7 @@
       j = d.createElement(s);
 
     j.async = true;
-    j.src =
-      "https://widget.gallabox.com/chatty-widget-v2.min.js?_=" + Math.random();
+    j.src = "https://widget.gallabox.com/chatty-widget-v2.min.js?_=" + Math.random();
     h.parentNode.insertBefore(j, h);
   })(window, document, "script", "https://widget.gallabox.com", token);
 })();

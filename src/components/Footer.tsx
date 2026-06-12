@@ -28,8 +28,8 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Logo />
             <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-              The AI-powered WhatsApp Business platform to automate conversations, qualify
-              leads and grow revenue.
+              The AI-powered WhatsApp Business platform to automate conversations, qualify leads and
+              grow revenue.
             </p>
           </div>
 

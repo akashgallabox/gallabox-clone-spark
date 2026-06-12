@@ -1,13 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import {
-  ArrowUpRight,
-  CheckCircle2,
-  Workflow,
-  Send,
-  BellRing,
-  Plug,
-  Star,
-} from "lucide-react";
+import { ArrowUpRight, CheckCircle2, Workflow, Send, BellRing, Plug, Star } from "lucide-react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import heroImg from "../assets/automation-hero.jpg";
@@ -34,14 +26,7 @@ export const Route = createFileRoute("/")({
   component: AutomationPage,
 });
 
-const clients = [
-  "Tata 1mg",
-  "Thrillophilia",
-  "Biotique",
-  "Footprint",
-  "Shiprocket",
-  "Apollo",
-];
+const clients = ["Tata 1mg", "Thrillophilia", "Biotique", "Footprint", "Shiprocket", "Apollo"];
 
 const features = [
   {
@@ -123,9 +108,8 @@ function AutomationPage() {
             Automate 50% of your customer conversations on WhatsApp
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-            Improve lead engagement, drive sales and reduce support tickets with an
-            AI-powered WhatsApp automation tool. Scale your business without increasing
-            your headcount.
+            Improve lead engagement, drive sales and reduce support tickets with an AI-powered
+            WhatsApp automation tool. Scale your business without increasing your headcount.
           </p>
           <a
             href="#"
@@ -175,9 +159,7 @@ function AutomationPage() {
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent text-primary">
                 <f.icon className="h-6 w-6" />
               </span>
-              <h2 className="mt-5 text-3xl font-bold text-foreground sm:text-4xl">
-                {f.title}
-              </h2>
+              <h2 className="mt-5 text-3xl font-bold text-foreground sm:text-4xl">{f.title}</h2>
               <p className="mt-3 text-lg font-medium text-muted-foreground">{f.subtitle}</p>
               <ul className="mt-6 space-y-4">
                 {f.points.map((p) => (
