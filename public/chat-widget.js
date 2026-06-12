@@ -1,6 +1,6 @@
 (function () {
   const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaHR0cHM6Ly9rdy5nYWxsYWJveC5jb20vYXIvIiwiaWQiOiI2OWYzMmFiMDIyNDlhNDE2M2JiY2Q5ZDQiLCJhY2NJZCI6IjYwMDVlYzQxNWRkZDcxMDAwNDMyMzkwZCIsImlhdCI6MTc4MDU3ODQzM30.aX0TpCqKV_yoCiSj8sbErOckpRRZgKmiArHG1UKvAu8";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiaHR0cHM6Ly9hbmFudGFtZ29hLmNvbS8iLCJpZCI6IjZhMmI4ZWMxODY3MzZhM2E5ZmQ1ZWJiNSIsImFjY0lkIjoiNjYzYTIwNzBmODhlNzEyOTZmYzU3MGRkIiwiaWF0IjoxNzgxMjM5NzY3fQ.LLPmA-0NAOkdi8ySuEZwX9FeRu2Roy0WdYPyKv8Xe5o";
 
   (function (w, d, s, u, t) {
     w.Chatty = function (c) {
